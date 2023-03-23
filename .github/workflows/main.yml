@@ -1,0 +1,17 @@
+- name: Run GitLeaks
+  # You may pin to the exact commit or the version.
+  # uses: gacts/gitleaks@9f42acce3208bf3574ad1c589b7f59c75ff247ac
+  uses: gacts/gitleaks@v1.1.4
+  with:
+    # GitLeaks version
+    version: # default is latest
+    # Path to the config file
+    config-path: # optional
+    # Path to source (git repo, directory, file; current working directory by default)
+    path: # optional
+    # Set it to "true" to run GitLeaks, or "false" if you don't want it to run (you can do this later manually)
+    run: # optional, default is true
+    # Set "false" for exiting without an error when GitLeaks run failed
+    fail-on-error: # optional, default is true
+    # GitHub auth token. Since there's a default, this is typically not supplied by the user
+    github-token: # optional, default is ${{ github.token }}
